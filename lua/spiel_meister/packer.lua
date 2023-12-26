@@ -80,4 +80,6 @@ return require('packer').startup(function(use)
     use "ggandor/leap.nvim"
 
     use "MysticalDevil/inlay-hints.nvim"
+    
+    use "tpope/vim-fugitive"
 end)
