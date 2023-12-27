@@ -18,7 +18,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'biome', 'rust_analyzer', 'pyright'},
+  ensure_installed = {'biome', 'rust_analyzer', 'pyright', 'hls'},
   handlers = {
     lsp_zero.default_setup,
   }
@@ -26,6 +26,7 @@ require('mason-lspconfig').setup({
 
 lsp_config.biome.setup {}
 lsp_config.pyright.setup {}
+lsp_config.hls.setup {}
 
 -- Inlay hints for rust
 lsp_config.rust_analyzer.setup({
