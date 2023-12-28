@@ -18,7 +18,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'biome', 'rust_analyzer', 'pyright', 'hls'},
+  ensure_installed = {'biome', 'rust_analyzer', 'pyright', 'hls', "clangd"},
   handlers = {
     lsp_zero.default_setup,
   }

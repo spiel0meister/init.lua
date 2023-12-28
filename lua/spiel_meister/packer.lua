@@ -30,12 +30,16 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Color
     use {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
         opts = {},
     }
+
+    use 'joshdick/onedark.vim'
+    -- Color fin.
 
     use {
         'nvim-lualine/lualine.nvim', -- Fancier statusline
