@@ -86,4 +86,6 @@ return require('packer').startup(function(use)
     use "MysticalDevil/inlay-hints.nvim"
     
     use "tpope/vim-fugitive"
+
+    use "bignimbus/pop-punk.vim"
 end)

@@ -181,6 +181,11 @@ _G.packer_plugins = {
     path = "/home/zan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["pop-punk.vim"] = {
+    loaded = true,
+    path = "/home/zan/.local/share/nvim/site/pack/packer/start/pop-punk.vim",
+    url = "https://github.com/bignimbus/pop-punk.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/zan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
