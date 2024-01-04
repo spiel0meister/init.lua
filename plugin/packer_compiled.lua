@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/zan/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  ["better-comments.nvim"] = {
+    loaded = true,
+    path = "/home/zan/.local/share/nvim/site/pack/packer/start/better-comments.nvim",
+    url = "https://github.com/Djancyp/better-comments.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/zan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -149,6 +154,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/zan/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-surround"] = {
     config = { "\27LJ\2\2?\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
