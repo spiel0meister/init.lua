@@ -92,4 +92,6 @@ return require('packer').startup(function(use)
     use "Djancyp/better-comments.nvim"
 
     use "rcarriga/nvim-notify"
+
+    use "lewis6991/gitsigns.nvim"
 end)
