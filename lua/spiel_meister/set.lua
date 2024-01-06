@@ -21,3 +21,6 @@ vim.opt.guifont = "JetBrains Mono:14"
 -- Spell check
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
+
+-- Termguicolors
+vim.opt.termguicolors = true
