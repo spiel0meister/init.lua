@@ -94,4 +94,6 @@ return require('packer').startup(function(use)
     use "rcarriga/nvim-notify"
 
     use "lewis6991/gitsigns.nvim"
+    
+    use "nvim-treesitter/nvim-treesitter-context"
 end)
