@@ -15,7 +15,7 @@ git clone --depth=1 https://github.com/spiel0meister/init.lua.git ~/.config/nvim
 
 Install packer:
 ```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ./.local/share/nvim/site/pack/packer/start/packer.nvim
+git clone --depth=1 https://github.com/wbthomason/packer.nvim ./.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
 ## Language Servers
