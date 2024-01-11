@@ -94,4 +94,8 @@ return require('packer').startup(function(use)
     use "lewis6991/gitsigns.nvim"
     
     use "nvim-treesitter/nvim-treesitter-context"
+
+    use "mattn/emmet-vim"
+
+    use "lukas-reineke/lsp-format.nvim"
 end)

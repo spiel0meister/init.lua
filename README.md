@@ -9,6 +9,15 @@ To install, simply clone this repo into the Neovim config directory in your user
 git clone https://github.com/spiel0meister/init.lua.git ~/.config/nvim # optionally, you can add the DEPTH flag to specify the depth of the cloning
 ```
 
+## Dependencies
+
+### Packer
+
+Install packer:
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ./.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 ## Language Servers
 
 ### Rust Analyzer

@@ -1,6 +1,11 @@
 local lsp_zero = require("lsp-zero")
 local lsp_config = require("lspconfig")
+local lsp_format = require("lsp-format")
 local cmp = require("cmp")
+
+local function lsp_format_on_attach(client, bufnr)
+    require("lsp-format").on_attach(client, bufnr)
+end
 
 lsp_zero.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
@@ -26,75 +31,7 @@ require('mason-lspconfig').setup({
     }
 })
 
-lsp_config.tsserver.setup {}
-lsp_config.pyright.setup {}
-lsp_config.hls.setup {}
-lsp_config.clangd.setup {}
-
--- Inlay hints for Rust
-require("lspconfig").rust_analyzer.setup({
-  settings = {
-    inlayHints = {
-      bindingModeHints = {
-        enable = false,
-      },
-      chainingHints = {
-        enable = true,
-      },
-      closingBraceHints = {
-        enable = true,
-        minLines = 25,
-      },
-      closureReturnTypeHints = {
-        enable = "never",
-      },
-      lifetimeElisionHints = {
-        enable = "never",
-        useParameterNames = false,
-      },
-      maxLength = 25,
-      parameterHints = {
-        enable = true,
-      },
-      reborrowHints = {
-        enable = "never",
-      },
-      renderColons = true,
-      typeHints = {
-        enable = true,
-        hideClosureInitialization = false,
-        hideNamedConstructor = false,
-      },
-    },
-  }
-})
-
--- Inlay hints for Javascript/Typescript
-require("lspconfig").tsserver.setup({
-  settings = {
-    typescript = {
-      inlayHints = {
-        includeInlayParameterNameHints = "all",
-        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true,
-      },
-    },
-    javascript = {
-      inlayHints = {
-        includeInlayParameterNameHints = "all",
-        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true,
-      },
-    },
-  }
-})
+lsp_config.tsserver.setup { on_attach = lsp_format_on_attach }
+lsp_config.pyright.setup { on_attach = lsp_format_on_attach }
+lsp_config.hls.setup { on_attach = lsp_format_on_attach }
+lsp_config.clangd.setup { on_attach = lsp_format_on_attach }
