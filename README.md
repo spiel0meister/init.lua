@@ -6,7 +6,7 @@ My **Neovim** configuration.
 To install, simply clone this repo into the Neovim config directory in your user directory.
 
 ```bash
-git clone https://github.com/spiel0meister/init.lua.git ~/.config/nvim # optionally, you can add the DEPTH flag to specify the depth of the cloning
+git clone --depth=1 https://github.com/spiel0meister/init.lua.git ~/.config/nvim
 ```
 
 ## Dependencies
@@ -37,7 +37,10 @@ Install [Haskell](https://www.haskell.org/ghcup/).
 
 ### tsserver
 
-Install [NodeJS](https://nodejs.org/en/download/package-manager).
+Install [NodeJS](https://nodejs.org/en/download/package-manager). Then, install Typescript:
+```bash
+npm i -y typescript
+```
 
 ### clangd
 
