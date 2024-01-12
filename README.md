@@ -18,6 +18,10 @@ Install packer:
 git clone --depth=1 https://github.com/wbthomason/packer.nvim ./.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
+### JetBrains Mono
+
+This config uses the *JetBrains Mono* font, therefore it must be installed from [here](https://www.jetbrains.com/lp/mono/).
+
 ## Language Servers
 
 ### Rust Analyzer
