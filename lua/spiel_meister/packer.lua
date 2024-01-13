@@ -98,4 +98,6 @@ return require('packer').startup(function(use)
     use "mattn/emmet-vim"
 
     use "lukas-reineke/lsp-format.nvim"
+
+    use "nvim-treesitter/playground"
 end)
