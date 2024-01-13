@@ -98,6 +98,4 @@ return require('packer').startup(function(use)
     use "mattn/emmet-vim"
 
     use "lukas-reineke/lsp-format.nvim"
-
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 end)
