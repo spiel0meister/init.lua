@@ -3,8 +3,12 @@ local lsp_config = require("lspconfig")
 local lsp_format = require("lsp-format")
 local cmp = require("cmp")
 
+lsp_format.setup {
+    clangd = { tab_width = 4 }
+}
+
 local function lsp_format_on_attach(client, bufnr)
-    require("lsp-format").on_attach(client, bufnr)
+    lsp_format.on_attach(client, bufnr)
 end
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -34,4 +38,4 @@ require('mason-lspconfig').setup({
 lsp_config.tsserver.setup { on_attach = lsp_format_on_attach }
 lsp_config.pyright.setup { on_attach = lsp_format_on_attach }
 lsp_config.hls.setup { on_attach = lsp_format_on_attach }
-lsp_config.clangd.setup { on_attach = lsp_format_on_attach }
+lsp_config.clangd.setup { }
