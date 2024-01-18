@@ -3,10 +3,6 @@ local lsp_config = require("lspconfig")
 local lsp_format = require("lsp-format")
 local cmp = require("cmp")
 
-lsp_format.setup {
-    clangd = { tab_width = 4 }
-}
-
 local function lsp_format_on_attach(client, bufnr)
     lsp_format.on_attach(client, bufnr)
 end
@@ -28,7 +24,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     -- Replace the language servers listed here
     -- with the ones you want to install
-    ensure_installed = { 'tsserver', 'rust_analyzer', 'pyright', 'hls', "clangd" },
+    ensure_installed = { 'tsserver', 'rust_analyzer', 'pyright', 'hls', "clangd", "lua_ls" },
     handlers = {
         lsp_zero.default_setup,
         biome = lsp_zero.noop
@@ -36,6 +32,8 @@ require('mason-lspconfig').setup({
 })
 
 lsp_config.tsserver.setup { on_attach = lsp_format_on_attach }
+lsp_config.lua_ls.setup { on_attach = lsp_format_on_attach }
 lsp_config.pyright.setup { on_attach = lsp_format_on_attach }
 lsp_config.hls.setup { on_attach = lsp_format_on_attach }
-lsp_config.clangd.setup { }
+lsp_config.rust_analyzer.setup({ on_attach = lsp_format_on_attach })
+lsp_config.clangd.setup {}

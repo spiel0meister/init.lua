@@ -30,6 +30,13 @@ return require('packer').startup(function(use)
         }
     }
 
+    use {
+        "neovim/nvim-lspconfig",
+        opts = {
+            inlay_hints = { enabled = true },
+        },
+    }
+
     -- Color
     use {
         "folke/tokyonight.nvim",
@@ -64,8 +71,8 @@ return require('packer').startup(function(use)
     use {
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.startify'.config)
         end
     }
 
@@ -87,12 +94,8 @@ return require('packer').startup(function(use)
 
     use "bignimbus/pop-punk.vim"
 
-    use "Djancyp/better-comments.nvim"
-
-    use "rcarriga/nvim-notify"
-
     use "lewis6991/gitsigns.nvim"
-    
+
     use "nvim-treesitter/nvim-treesitter-context"
 
     use "mattn/emmet-vim"
