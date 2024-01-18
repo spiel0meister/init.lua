@@ -115,11 +115,6 @@ _G.packer_plugins = {
     path = "/home/zan-sovic/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["inlay-hints.nvim"] = {
-    loaded = true,
-    path = "/home/zan-sovic/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
-    url = "https://github.com/MysticalDevil/inlay-hints.nvim"
-  },
   ["leap.nvim"] = {
     loaded = true,
     path = "/home/zan-sovic/.local/share/nvim/site/pack/packer/start/leap.nvim",
@@ -235,6 +230,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zan-sovic/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/zan-sovic/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-visual-multi"] = {
     loaded = true,

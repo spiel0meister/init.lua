@@ -88,7 +88,13 @@ return require('packer').startup(function(use)
         end
     })
 
-    use "ggandor/leap.nvim"
+    use {
+        "ggandor/leap.nvim",
+        branch = "main",
+        requires = {
+            "tpope/vim-repeat"
+        }
+    }
 
     use "tpope/vim-fugitive"
 
