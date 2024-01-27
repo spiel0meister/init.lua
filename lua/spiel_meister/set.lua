@@ -20,7 +20,11 @@ vim.opt.guifont = "JetBrains Mono:14"
 
 -- Spell check
 vim.opt.spell = true
-vim.opt.spelllang = 'en_us'
+vim.opt.spelllang = "en_us"
 
 -- Termguicolors
 vim.opt.termguicolors = true
+
+-- transparent fold text (source: https://github.com/neovim/neovim/pull/20750)
+vim.o.foldtext = ""
+vim.o.fillchars = "fold: "
