@@ -61,6 +61,13 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    use {
+        "ixru/nvim-markdown",
+        config = function()
+            vim.g.vim_markdown_math = 1
+        end
+    }
+
     use "tpope/vim-commentary"
 
     use {
