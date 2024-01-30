@@ -20,7 +20,7 @@ git clone --depth=1 https://github.com/wbthomason/packer.nvim ./.local/share/nvi
 
 ### JetBrains Mono
 
-This config uses the *JetBrains Mono* font, therefore it must be installed from [here](https://www.jetbrains.com/lp/mono/).
+This config uses the *JetBrains Mono* font, therefore it must be installed from here: <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip>.
 
 ## Language Servers
 
