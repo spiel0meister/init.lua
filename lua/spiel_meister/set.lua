@@ -16,7 +16,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Font
-vim.opt.guifont = "JetBrains Mono:14"
+vim.opt.guifont = "JetBrainsMono Nerd Font:14"
 
 -- Spell check
 vim.opt.spell = true
