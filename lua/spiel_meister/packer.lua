@@ -17,7 +17,6 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            --- Uncomment these if you want to manage LSP servers from neovim
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
 
@@ -71,11 +70,6 @@ return require('packer').startup(function(use)
     use "tpope/vim-commentary"
 
     use {
-        "mg979/vim-visual-multi",
-        branch = "master"
-    }
-
-    use {
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
         config = function()
@@ -104,8 +98,6 @@ return require('packer').startup(function(use)
     }
 
     use "tpope/vim-fugitive"
-
-    use "bignimbus/pop-punk.vim"
 
     use "lewis6991/gitsigns.nvim"
 

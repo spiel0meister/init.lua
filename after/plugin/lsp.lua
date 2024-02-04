@@ -31,13 +31,13 @@ require('mason-lspconfig').setup({
     }
 })
 
-lsp_config.tsserver.setup { on_attach = lsp_format_on_attach }
-lsp_config.lua_ls.setup { on_attach = lsp_format_on_attach }
-lsp_config.pyright.setup { on_attach = lsp_format_on_attach }
-lsp_config.hls.setup { on_attach = lsp_format_on_attach }
+lsp_config.tsserver.setup({ on_attach = lsp_format_on_attach })
+lsp_config.lua_ls.setup({ on_attach = lsp_format_on_attach })
+lsp_config.pyright.setup({ on_attach = lsp_format_on_attach })
+lsp_config.hls.setup({ on_attach = lsp_format_on_attach })
 lsp_config.rust_analyzer.setup({ on_attach = lsp_format_on_attach })
 lsp_config.asm_lsp.setup({ on_attach = lsp_format_on_attach })
 lsp_config.neocmake.setup({ on_attach = lsp_format_on_attach })
 lsp_config.html.setup({ on_attach = lsp_format_on_attach })
 lsp_config.bashls.setup({ on_attach = lsp_format_on_attach })
-lsp_config.clangd.setup {}
+lsp_config.clangd.setup({})
