@@ -138,4 +138,6 @@ return require('packer').startup(function(use)
     use 'Exafunction/codeium.vim'
 
     use "projekt0n/github-nvim-theme"
+
+    use "norcalli/nvim-colorizer.lua"
 end)
