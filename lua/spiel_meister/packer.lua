@@ -132,4 +132,6 @@ return require('packer').startup(function(use)
     use "projekt0n/github-nvim-theme"
 
     use "norcalli/nvim-colorizer.lua"
+
+    use "mattn/emmet-vim"
 end)
