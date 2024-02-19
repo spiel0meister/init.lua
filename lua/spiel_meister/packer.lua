@@ -114,12 +114,13 @@ return require('packer').startup(function(use)
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {},
         config = function()
-            vim.keymap.set("n", "<leader>tt", function() require("trouble").toggle() end)
-            vim.keymap.set("n", "<leader>tw", function() require("trouble").toggle("workspace_diagnostics") end)
-            vim.keymap.set("n", "<leader>td", function() require("trouble").toggle("document_diagnostics") end)
-            vim.keymap.set("n", "<leader>tq", function() require("trouble").toggle("quickfix") end)
-            vim.keymap.set("n", "<leader>tll", function() require("trouble").toggle("loclist") end)
-            vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
+            local trouble = require("trouble")
+            vim.keymap.set("n", "<leader>tt", function() trouble.toggle() end)
+            vim.keymap.set("n", "<leader>tw", function() trouble.toggle("workspace_diagnostics") end)
+            vim.keymap.set("n", "<leader>td", function() trouble.toggle("document_diagnostics") end)
+            vim.keymap.set("n", "<leader>tq", function() trouble.toggle("quickfix") end)
+            vim.keymap.set("n", "<leader>tll", function() trouble.toggle("loclist") end)
+            vim.keymap.set("n", "gR", function() trouble.toggle("lsp_references") end)
         end
     }
 
@@ -127,5 +128,13 @@ return require('packer').startup(function(use)
 
     use "projekt0n/github-nvim-theme"
 
-    use "norcalli/nvim-colorizer.lua"
+    use {
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            local colorizer = require('colorizer')
+            colorizer.setup()
+        end
+    }
+
+    use "mg979/vim-visual-multi"
 end)
