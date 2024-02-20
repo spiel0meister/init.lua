@@ -10,8 +10,8 @@ return require('packer').startup(function(use)
     }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('theprimeagen/harpoon', { run = ':TSUpdate' })
-    use('theprimeagen/vim-be-good', { run = ':TSUpdate' })
+    use('theprimeagen/harpoon')
+    use('theprimeagen/vim-be-good')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
