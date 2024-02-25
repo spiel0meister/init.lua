@@ -137,4 +137,14 @@ return require('packer').startup(function(use)
     }
 
     use "mg979/vim-visual-multi"
+
+    use {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+            local todo_comments = require("todo-comments")
+
+            todo_comments.setup()
+        end
+    }
 end)
