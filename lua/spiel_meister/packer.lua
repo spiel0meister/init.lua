@@ -45,6 +45,8 @@ return require('packer').startup(function(use)
     }
 
     use 'joshdick/onedark.vim'
+
+    use "catppuccin/nvim"
     -- Color fin.
 
     use {
@@ -147,4 +149,6 @@ return require('packer').startup(function(use)
             todo_comments.setup()
         end
     }
+
+    use "RRethy/vim-illuminate"
 end)
