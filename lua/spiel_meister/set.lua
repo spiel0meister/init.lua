@@ -26,5 +26,7 @@ vim.opt.spelllang = "en_us"
 vim.opt.termguicolors = true
 
 -- transparent fold text (source: https://github.com/neovim/neovim/pull/20750)
-vim.o.foldtext = ""
-vim.o.fillchars = "fold: "
+vim.opt.foldtext = ""
+vim.opt.fillchars = "fold: "
+
+vim.opt.cmdheight = 0

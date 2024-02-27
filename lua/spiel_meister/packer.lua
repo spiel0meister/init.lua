@@ -47,13 +47,13 @@ return require('packer').startup(function(use)
     use 'joshdick/onedark.vim'
 
     use "catppuccin/nvim"
-    -- Color fin.
+
+    use "projekt0n/github-nvim-theme"
 
     use {
         'nvim-lualine/lualine.nvim', -- Fancier statusline
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-    use 'nvim-tree/nvim-web-devicons'
 
     use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
 
@@ -128,8 +128,6 @@ return require('packer').startup(function(use)
 
     use 'Exafunction/codeium.vim'
 
-    use "projekt0n/github-nvim-theme"
-
     use {
         "norcalli/nvim-colorizer.lua",
         config = function()
@@ -152,6 +150,7 @@ return require('packer').startup(function(use)
 
     use "RRethy/vim-illuminate"
 
+    -- DAP
     use "mfussenegger/nvim-dap"
     use "rcarriga/nvim-dap-ui"
     use "mfussenegger/nvim-dap-python"

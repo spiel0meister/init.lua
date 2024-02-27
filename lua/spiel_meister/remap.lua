@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>", "")
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- Exit file, open file tree
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- Open explorer
 
 -- Git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git) -- Open Git (vim-fugitive) (probably)
