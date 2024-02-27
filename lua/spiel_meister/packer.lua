@@ -151,4 +151,8 @@ return require('packer').startup(function(use)
     }
 
     use "RRethy/vim-illuminate"
+
+    use "mfussenegger/nvim-dap"
+    use "rcarriga/nvim-dap-ui"
+    use "mfussenegger/nvim-dap-python"
 end)
