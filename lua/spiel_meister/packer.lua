@@ -1,7 +1,8 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+return require("packer").startup(function(use)
+    use "wbthomason/packer.nvim"
+    use "nvim-tree/nvim-web-devicons"
 
     use {
         'nvim-telescope/telescope.nvim',
@@ -10,8 +11,6 @@ return require('packer').startup(function(use)
     }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('theprimeagen/harpoon')
-    use('theprimeagen/vim-be-good')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -113,7 +112,7 @@ return require('packer').startup(function(use)
 
     use {
         "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
+        requires = { "nvim-tree/nvim-web-devicons" },
         opts = {},
         config = function()
             local trouble = require("trouble")
