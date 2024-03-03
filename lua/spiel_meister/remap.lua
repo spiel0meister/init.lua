@@ -34,5 +34,5 @@ vim.keymap.set("n", "<leader>pp", "\"*p") -- Paste clipboard
 vim.keymap.set("n", "<leader>f", function() -- Reformat file (with LSP)
     vim.lsp.buf.format()
 end)
-vim.keymap.set("n", "<leader>rt", ">>") -- Ident right
-vim.keymap.set("n", "<leader>lt", "<<") -- Ident left
+vim.keymap.set("n", "<leader>rt", ">>") -- Indent
+vim.keymap.set("n", "<leader>lt", "<<") -- Remove indent

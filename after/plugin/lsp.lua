@@ -26,17 +26,24 @@ require('mason-lspconfig').setup({
     -- with the ones you want to install
     ensure_installed = { 'tsserver', 'rust_analyzer', 'pyright', 'hls', "clangd", "lua_ls", "asm_lsp", "neocmake", "html", "bashls", "cssls" },
     handlers = {
-        lsp_zero.default_setup,
-        biome = lsp_zero.noop
+        function(server)
+            if server ~= "clangd" then
+                lsp_config[server].setup({ on_attach = lsp_format_on_attach })
+            else
+                lsp_config[server].setup({})
+            end
+        end,
+        biome = lsp_zero.noop,
+        lua_ls = function()
+            lsp_config.lua_ls.setup({
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" }
+                        }
+                    }
+                }
+            })
+        end
     }
 })
-
-lsp_config.tsserver.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.lua_ls.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.rust_analyzer.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.pyright.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.asm_lsp.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.neocmake.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.html.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.bashls.setup({ on_attach = lsp_format_on_attach, })
-lsp_config.clangd.setup({})
