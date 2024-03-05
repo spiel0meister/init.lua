@@ -4,8 +4,8 @@ local dap_py = require("dap-python")
 dap_ui.setup({})
 dap_py.setup()
 
-vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint, {})
-vim.keymap.set("n", "<leader>dc", dap.continue, {})
+vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "Start/Continue" })
 
 dap.listeners.before.attach.dapui_config = function()
     dap_ui.open()

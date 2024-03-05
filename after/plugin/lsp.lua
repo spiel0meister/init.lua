@@ -7,7 +7,7 @@ local function lsp_format_on_attach(client, bufnr)
     lsp_format.on_attach(client, bufnr)
 end
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
     lsp_zero.default_keymaps({ buffer = bufnr })
