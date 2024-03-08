@@ -28,3 +28,7 @@ vim.opt.termguicolors = true
 -- transparent fold text (source: https://github.com/neovim/neovim/pull/20750)
 vim.opt.foldtext = ""
 vim.opt.fillchars = "fold: "
+
+-- Scroll
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
