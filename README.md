@@ -1,6 +1,6 @@
 # init.lua
 
-My **Neovim** configuration.
+My **Neovim** configuration using [packer.nvim](https://github.com/wbthomason/packer.nvim) as the plugin manager.
 
 ## Quick Start
 To install, simply clone this repo into the Neovim config directory in your user directory.
